@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+    <title>Before</title>
+
+    <script src="jquery-3.6.0.js"></script>
+
+</head>
+
+<body>
+
+    <h2>Select bank from list</h2>
+
+    <input type="radio" name="bank" class="bank" value="ICICI">ICICI Bank<br>
+    <input type="radio" name="bank" class="bank" value="Canara">Canara Bank<br>
+    <input type="radio" name="bank" class="bank" value="Karnataka">Karnataka Bank<br>
+    <input type="radio" name="bank" class="bank" value="HSBC">HSBC Bank<br>
+
+    <br>
+    <hr>
+
+    <h3>Display Value</h3>
+
+    <br>
+
+    <span id="s1"></span>
+
+
+    <script>
+
+        $(".bank").change(function () {
+
+            var s;
+
+            if ($(".bank")[0].checked == true) {
+                s = $(".bank")[0].value;
+            }
+            else if ($(".bank")[1].checked == true) {
+                s = $(".bank")[1].value;
+            }
+            else if ($(".bank")[2].checked == true) {
+                s = $(".bank")[2].value;
+            }
+            else if ($(".bank")[3].checked == true) {
+                s = $(".bank")[3].value;
+            }
+
+            $("#s1").html(s);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
